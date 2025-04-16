@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Golf Tip Generator</title>
+</head>
+<body>
+  <h1>🏌️ Golf Tip of the Day</h1>
+  <p>Click the button below to get a random tip to improve your game</p>
+
+  <div id="tip-box">Your golf tip will appear here...</div>
+  <button onclick="generateTip()">Get Tip</button>
+  <p>&nbsp;</p>
+  <a href="golf.html">Back to Scratch Page</a>
+
+  <script>
+    const tips = [
+      "Keep your head down and eyes on the ball.",
+      "Focus on a smooth, relaxed swing — don't rush it.",
+      "Use your hips to generate power, not just your arms.",
+      "Visualize the shot before you swing.",
+      "Work on your short game — putting wins games.",
+      "Grip the club lightly — tension kills accuracy.",
+      "Don’t forget to stretch before playing!",
+      "Always play with the wind in mind.",
+      "Consistency is better than distance.",
+      "Stay mentally positive after a bad shot."
+    ];
+
+    function generateTip() {
+      const randomIndex = Math.floor(Math.random() * tips.length);
+      document.getElementById('tip-box').innerText = tips[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
